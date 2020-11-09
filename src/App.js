@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Dropdown from "react-dropdown";
 import parse from "html-react-parser";
-import fetchShow from './api/fetchShow'
+import { fetchShow } from './api/fetchShow'
 
 import { formatSeasons } from "./utils/formatSeasons";
 
@@ -23,9 +22,7 @@ export default function App() {
     })
       .catch(err => {
         console.log(err.message)
-  });
-    // setShow(res.data);
-    // setSeasons(formatSeasons(res.data._embedded.episodes))
+      });
   }, []);
 
   const handleSelect = e => {
