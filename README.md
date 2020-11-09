@@ -58,7 +58,7 @@ export const fetchShow = () => {
   
  // App.js
 useEffect(() => {
-  fetchShow
+  fetchShow()
     .then(res => {
       // set state with the data
     }
